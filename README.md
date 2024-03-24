@@ -101,6 +101,11 @@ trainer.train()
 metrics = trainer.evaluate()
 ```
 
+To share the model with the world: 
+```python
+trainer.push_to_hub("setfit-mini-imdb")
+```
+
 #### Concluding Insights
 
 This expedition through Argilla and SetFit's capabilities in genre classification not only showcases the potential of combining these tools for efficient and impactful ML tasks but also emphasizes the power of modern ML methodologies in achieving remarkable results with limited data. The process is as enlightening as the outcomes, illustrating the impactful possibilities in the domain of movie streaming and beyond.
