@@ -69,7 +69,13 @@ rg.log(unlabelled, "imdb_unlabelled")
 
 #### The Manual Annotation Phase
 
-Next, we delve into annotating our dataset with sentiments of positive and negative, utilizing Argilla's streamlined interface for about 15 minutes of focused labeling work.
+Next, we delve into annotating our dataset with sentiments of positive and negative, utilizing Argilla's streamlined interface.
+Label Creation: We initiate the process by generating two labels, "pos" for positive and "neg" for negative, mirroring the original dataset's labeling convention. This step is crucial for maintaining data integrity and ensuring consistency across our classification efforts.
+
+Interactive Labeling: Leveraging Argilla's user-friendly interface, we proceed to manually label a selected sample of examples. Remarkably, this phase took only 15 minutes, demonstrating the efficiency of Argilla's UI for quick and accurate data annotation.
+```python
+rg.load("imdb_unlabelled").prepare_for_training().push_to_hub("mini-imdb")
+```
 
 #### Embarking on SetFit Training
 
